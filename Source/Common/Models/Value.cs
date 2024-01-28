@@ -1,4 +1,4 @@
-﻿namespace Common.Models;
+﻿namespace Erdmier.DomainCore.Common.Models;
 
 // TODO: Using source generation, add deconstruct method.
 // TODO: Make value object serializable.

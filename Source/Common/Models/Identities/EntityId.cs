@@ -1,4 +1,4 @@
-﻿namespace Common.Models.Identities;
+﻿namespace Erdmier.DomainCore.Common.Models.Identities;
 
 public abstract class EntityId<TId> : Value
 {

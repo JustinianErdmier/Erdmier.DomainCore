@@ -1,6 +1,6 @@
-﻿using Common.Models.Identities;
+﻿using Erdmier.DomainCore.Common.Models.Identities;
 
-namespace Common.Models;
+namespace Erdmier.DomainCore.Common.Models;
 
 public abstract class AggregateRoot<TId, TIdType> : Entity<TId>
     where TId : AggregateRootId<TIdType>
