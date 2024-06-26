@@ -5,6 +5,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{6BDB611C-D0C5-41E9-836E-FF923698719D}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainCore", "Source\DomainCore\DomainCore.csproj", "{681CBD0D-EB30-4856-A805-6751EFB34BEE}"
