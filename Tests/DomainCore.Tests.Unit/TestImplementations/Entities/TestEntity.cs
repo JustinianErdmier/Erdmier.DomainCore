@@ -16,6 +16,7 @@ public sealed class TestEntity : Entity<TestImplementationId>
         Age  = age;
     }
 
+
     public string Name { get; set; }
 
     public int Age { get; set; }
