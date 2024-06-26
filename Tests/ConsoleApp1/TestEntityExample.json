@@ -1,0 +1,9 @@
+﻿{
+  "$type": "Erdmier.DomainCore.Tests.Unit.TestImplementations.Entities.TestEntity, DomainCore.Tests.Unit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+  "name": "Justinian",
+  "age": 25,
+  "id": {
+    "$type": "Erdmier.DomainCore.Tests.Unit.TestImplementations.EntityIds.TestImplementationId, DomainCore.Tests.Unit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "value": "f82ffb2c-38c5-4616-b673-29a91c4502be"
+  }
+}

@@ -4,6 +4,11 @@ public sealed class EntityIdJsonConverter<TId> : JsonConverter<EntityId<TId>>
 {
     public override EntityId<TId> Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
+        if (reader.TokenType is JsonTokenType.Null or not JsonTokenType.StartObject)
+        {
+            throw new JsonException();
+        }
+
         // Create a new instance of JsonDocument and deserialize the reader into it
         using JsonDocument document = JsonDocument.ParseValue(ref reader);
 
@@ -31,10 +36,16 @@ public sealed class EntityIdJsonConverter<TId> : JsonConverter<EntityId<TId>>
                                                                           ?.PropertyType ??
                                                                throw new JsonException());
 
-        // Create an instance of the derived class and return it
+        // Get create method and validate signature
         MethodInfo? createMethod = derivedType.GetMethod(name: "Create", bindingAttr: BindingFlags.Public | BindingFlags.Static);
 
-        return (EntityId<TId>?)createMethod?.Invoke(obj: null, parameters: [value]) ?? throw new JsonException();
+        if (createMethod is null || createMethod.ReturnType != derivedType || createMethod.IsGenericMethod)
+        {
+            throw new JsonException(message: $"Invalid create method signature when parsing a(n) {typeName}");
+        }
+
+        // Create an instance of the derived class and return it
+        return (EntityId<TId>?)createMethod.Invoke(obj: null, parameters: [value]) ?? throw new JsonException();
     }
 
     public override void Write(Utf8JsonWriter writer, EntityId<TId> value, JsonSerializerOptions options)
