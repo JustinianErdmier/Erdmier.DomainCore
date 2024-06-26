@@ -44,10 +44,11 @@ string editionJson = JsonSerializer.Serialize(edition, serializerOptions);
 Console.WriteLine(value: nameof(editionJson));
 Console.WriteLine(value: editionJson + "\n");
 
-Edition? editionFromJson = JsonSerializer.Deserialize<Edition>(editionJson, serializerOptions);
-
-Console.WriteLine(value: nameof(editionFromJson));
-Console.WriteLine(value: editionFromJson + "\n");
+// Uncomment to throw error deserializing property of type int.
+// Edition? editionFromJson = JsonSerializer.Deserialize<Edition>(editionJson, serializerOptions);
+//
+// Console.WriteLine(value: nameof(editionFromJson));
+// Console.WriteLine(value: editionFromJson + "\n");
 
 string authorIdJson = JsonSerializer.Serialize(authorId, serializerOptions);
 
@@ -64,10 +65,11 @@ string authorJson = JsonSerializer.Serialize(author, serializerOptions);
 Console.WriteLine(value: nameof(authorJson));
 Console.WriteLine(value: authorJson + "\n");
 
-Author? authorFromJson = JsonSerializer.Deserialize<Author>(authorJson, serializerOptions);
-
-Console.WriteLine(value: nameof(authorFromJson));
-Console.WriteLine(value: authorFromJson + "\n");
+// Uncomment to throw error deserializing property of type string.
+// Author? authorFromJson = JsonSerializer.Deserialize<Author>(authorJson, serializerOptions);
+//
+// Console.WriteLine(value: nameof(authorFromJson));
+// Console.WriteLine(value: authorFromJson + "\n");
 
 string bookIdJson = JsonSerializer.Serialize(bookId, serializerOptions);
 
@@ -79,6 +81,7 @@ BookId? bookIdFromJson = JsonSerializer.Deserialize<BookId>(bookIdJson, serializ
 Console.WriteLine(value: nameof(bookIdFromJson));
 Console.WriteLine(value: bookIdFromJson + "\n");
 
+// Uncomment to throw error regarding ambiguous reference to property named "Id"
 // string bookJson = JsonSerializer.Serialize(book, serializerOptions);
 //
 // Console.WriteLine(value: nameof(bookJson));
