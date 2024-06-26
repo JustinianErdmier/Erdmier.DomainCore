@@ -9,14 +9,17 @@ using Erdmier.DomainCore.JsonSerializers;
 
 #region Variables
 
+EditionId editionId = EditionId.CreateUnique();
+
+Edition edition = Edition.Create(editionId, year: 2024);
+
 AuthorId authorId = AuthorId.CreateUnique();
 
 Author author = Author.Create(authorId, firstName: "Madeline", lastName: "Miller");
 
 BookId bookId = BookId.CreateUnique();
 
-Book book = Book.Create(bookId, title: "The Song of Achilles", numberOfPages: 378, Genres.HistoricalFiction, authors: [])
-                .AddAuthor(author);
+Book book = Book.Create(bookId, title: "The Song of Achilles", numberOfPages: 378, Genres.HistoricalFiction, edition, authors: [author]);
 
 JsonSerializerOptions serializerOptions =
     new(JsonSerializerDefaults.Web) { Converters = { new EntityIdJsonConverterFactory(), new EntityJsonConverterFactory() }, WriteIndented = true };
@@ -25,6 +28,26 @@ JsonSerializerOptions serializerOptions =
 
 
 #region Serializations & Deserializations
+
+string editionIdJson = JsonSerializer.Serialize(editionId, serializerOptions);
+
+Console.WriteLine(value: nameof(editionIdJson));
+Console.WriteLine(value: editionIdJson + "\n");
+
+EditionId? editionIdFromJson = JsonSerializer.Deserialize<EditionId>(editionIdJson, serializerOptions);
+
+Console.WriteLine(value: nameof(editionIdFromJson));
+Console.WriteLine(value: editionIdFromJson + "\n");
+
+string editionJson = JsonSerializer.Serialize(edition, serializerOptions);
+
+Console.WriteLine(value: nameof(editionJson));
+Console.WriteLine(value: editionJson + "\n");
+
+Edition? editionFromJson = JsonSerializer.Deserialize<Edition>(editionJson, serializerOptions);
+
+Console.WriteLine(value: nameof(editionFromJson));
+Console.WriteLine(value: editionFromJson + "\n");
 
 string authorIdJson = JsonSerializer.Serialize(authorId, serializerOptions);
 

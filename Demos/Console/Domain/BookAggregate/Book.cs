@@ -11,12 +11,13 @@ public sealed class Book : AggregateRoot<BookId, Guid>
 {
     private readonly List<Author> _authors = [];
 
-    private Book(BookId bookId, string title, int numberOfPages, Genres genre, List<Author> authors)
+    private Book(BookId bookId, string title, int numberOfPages, Genres genre, Edition edition, List<Author> authors)
         : base(bookId)
     {
         UpdateTitle(title);
         SetNumberOfPages(NumberOfPages);
         SetGenre(genre);
+        SetEdition(edition);
         AddAuthors(authors);
     }
 
@@ -28,6 +29,8 @@ public sealed class Book : AggregateRoot<BookId, Guid>
     public int NumberOfPages { get; private set; }
 
     public Genres Genre { get; private set; }
+
+    public Edition Edition { get; private set; } = default!;
 
     public IReadOnlyList<Author> Authors => _authors.AsReadOnly();
 
@@ -68,6 +71,17 @@ public sealed class Book : AggregateRoot<BookId, Guid>
         return this;
     }
 
+    public Book SetEdition(Edition edition)
+    {
+        edition.ThrowIfNull();
+
+        // Additional business logic/validation...
+
+        Edition = edition;
+
+        return this;
+    }
+
     public Book AddAuthor(Author author)
     {
         if (!_authors.Contains(author))
@@ -85,9 +99,9 @@ public sealed class Book : AggregateRoot<BookId, Guid>
         return this;
     }
 
-    public static Book Create(BookId bookId, string title, int numberOfPages, Genres genre, List<Author> authors) =>
-        new(bookId, title, numberOfPages, genre, authors);
+    public static Book Create(BookId bookId, string title, int numberOfPages, Genres genre, Edition edition, List<Author> authors) =>
+        new(bookId, title, numberOfPages, genre, edition, authors);
 
-    public static Book CreateUnique(string title, int numberOfPages, Genres genre) =>
-        Create(bookId: BookId.CreateUnique(), title, numberOfPages, genre, authors: []);
+    public static Book CreateUnique(string title, int numberOfPages, Genres genre, Edition edition) =>
+        Create(bookId: BookId.CreateUnique(), title, numberOfPages, genre, edition, authors: []);
 }
