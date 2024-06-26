@@ -53,14 +53,16 @@ public sealed class EntityJsonConverter<TId> : JsonConverter<Entity<TId>>
 
             PropertyInfo[] properties = derivedType.GetProperties();
 
-            PropertyInfo property = properties.First(p => p.Name.Equals(propertyName, StringComparison.InvariantCultureIgnoreCase));
+            PropertyInfo? property = properties.FirstOrDefault(p => p.Name.Equals(propertyName, StringComparison.InvariantCultureIgnoreCase));
+
+            if (property is null)
+            {
+                throw new JsonException();
+            }
 
             Type propertyType = property.PropertyType;
 
-            // Type propertyType = derivedType.GetProperty(propertyName.ToUpperInvariant())
-            //                                  ?.PropertyType ??
-            //                     throw new JsonException();
-
+            // BUG: Issue with deserializing string. I guess `reader.ValueSpan` doesn't pass the quotation mark and the serializer says that the first letter of the string is invalid start token.
             object? value = JsonSerializer.Deserialize(reader.ValueSpan, propertyType, options);
 
             parsedData.Add(propertyName, value);

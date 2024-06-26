@@ -21,7 +21,8 @@ public sealed class EntityJsonConverterFactory : JsonConverterFactory
 
     public override JsonConverter CreateConverter(Type typeToConvert, JsonSerializerOptions options)
     {
-        Type valueType = typeToConvert.GetProperty(name: "Id")
+        // Need to address issue with resolving ambiguous match for aggregate root id
+        Type valueType = typeToConvert.GetProperty(name: "Id", bindingAttr: BindingFlags.Public | BindingFlags.Instance)
                                       ?.PropertyType ??
                          throw new JsonException();
 

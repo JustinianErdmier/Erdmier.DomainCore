@@ -5,10 +5,15 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <RootNamespace>Erdmier.DomainCore.Demos.Console</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\DomainCore.Tests.Unit\DomainCore.Tests.Unit.csproj"/>
+        <ProjectReference Include="..\..\Source\DomainCore\DomainCore.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Throw" Version="1.4.0"/>
     </ItemGroup>
 
 </Project>
