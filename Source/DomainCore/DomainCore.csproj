@@ -5,6 +5,14 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Erdmier.DomainCore</RootNamespace>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>Erdmier.DomainCore</PackageId>
+        <Version>0.1.0</Version>
+        <Title>DomainCore</Title>
+        <Authors>JustinianErdmier</Authors>
+        <PackageProjectUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</RepositoryUrl>
+        <PackageTags>domain-driven-design objects; ddd objects</PackageTags>
     </PropertyGroup>
 
 </Project>
