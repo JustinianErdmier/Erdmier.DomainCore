@@ -15,6 +15,13 @@
         <PackageTags>domain-driven-design objects; ddd objects</PackageTags>
         <Description>A small library for easily and quickly modeling your domain layer following DDD principles.</Description>
         <Copyright>Copyright (c) Justin Erdmier 2024.</Copyright>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
+        <None Include="..\..\LICENSE.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
 
 </Project>
