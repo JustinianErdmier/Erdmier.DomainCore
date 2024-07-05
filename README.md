@@ -1,0 +1,2 @@
+﻿# Erdmier.DomainCore
+TBA
