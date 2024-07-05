@@ -1,7 +1,7 @@
-﻿namespace Erdmier.DomainCore.Common.Models;
+﻿namespace Erdmier.DomainCore.Models;
 
 public abstract class Entity<TId> : IEquatable<Entity<TId>>
-    where TId : Value
+    where TId : ValueObject
 {
     protected Entity(TId id) => Id = id;
 
@@ -10,7 +10,7 @@ public abstract class Entity<TId> : IEquatable<Entity<TId>>
 
     public TId Id { get; protected init; } = default!;
 
-    public bool Equals(Entity<TId>? other) => Equals((object?)other);
+    public bool Equals(Entity<TId>? other) => Equals(obj: other);
 
     public override bool Equals(object? obj) => obj is Entity<TId> entity && Id.Equals(entity.Id);
 

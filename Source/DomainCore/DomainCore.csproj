@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Erdmier.DomainCore</RootNamespace>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>Erdmier.DomainCore</PackageId>
+        <Version>1.0.0-alpha</Version>
+        <Title>DomainCore</Title>
+        <Authors>JustinianErdmier</Authors>
+        <PackageProjectUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</RepositoryUrl>
+        <PackageTags>domain-driven-design objects; ddd objects</PackageTags>
+        <Description>A small library for easily and quickly modeling your domain layer following DDD principles.</Description>
+        <Copyright>Copyright (c) Justin Erdmier 2024.</Copyright>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
+        <None Include="..\..\LICENSE.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+
+</Project>
