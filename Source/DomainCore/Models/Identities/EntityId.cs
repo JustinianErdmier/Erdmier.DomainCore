@@ -6,9 +6,11 @@ public abstract class EntityId<TId> : ValueObject
 {
     protected EntityId(TId value) => Value = value;
 
+    // ReSharper disable once UnusedMember.Global
     protected EntityId()
     { }
 
+    // ReSharper disable once MemberCanBePrivate.Global
     /// <summary>Gets the value of the id.</summary>
     public TId Value { get; } = default!;
 

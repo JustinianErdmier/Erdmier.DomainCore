@@ -17,6 +17,7 @@ public abstract class AggregateRoot<TId, TIdType> : Entity<TId>
     /// <remarks>This property overrides the base <see cref="Entity{TId}.Id" /> property to ensure it is of type <see cref="AggregateRootId{TId}" />.</remarks>
     public new AggregateRootId<TIdType> Id
     {
+        // ReSharper disable once UnusedMember.Global
         get => base.Id;
 
 #pragma warning disable CA1061
