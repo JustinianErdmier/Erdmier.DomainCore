@@ -7,7 +7,7 @@
         <RootNamespace>Erdmier.DomainCore</RootNamespace>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>Erdmier.DomainCore</PackageId>
-        <Version>1.0.0-alpha</Version>
+        <Version>1.0.0</Version>
         <Title>DomainCore</Title>
         <Authors>JustinianErdmier</Authors>
         <PackageProjectUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</PackageProjectUrl>
