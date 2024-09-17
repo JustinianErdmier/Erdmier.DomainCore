@@ -14,7 +14,8 @@ public abstract class ValueObject : IEquatable<ValueObject>
     /// <inheritdoc />
     public override bool Equals(object? obj)
     {
-        if (obj is null || obj.GetType() != GetType())
+        if (obj is null
+            || obj.GetType() != GetType())
         {
             return false;
         }
@@ -22,7 +23,7 @@ public abstract class ValueObject : IEquatable<ValueObject>
         ValueObject valueObject = (ValueObject)obj;
 
         return GetEqualityComponents()
-            .SequenceEqual(second: valueObject.GetEqualityComponents());
+            .SequenceEqual(valueObject.GetEqualityComponents());
     }
 
     /// <summary>Determines whether two <see cref="ValueObject" /> instances are equal.</summary>
@@ -37,10 +38,10 @@ public abstract class ValueObject : IEquatable<ValueObject>
     /// <returns><c>true</c> if the specified <see cref="ValueObject" /> instances are not equal; otherwise, <c>false</c>.</returns>
     public static bool operator !=(ValueObject left, ValueObject right) => !Equals(left, right);
 
-    public override int GetHashCode() =>
-        GetEqualityComponents()
-            .Select(x => x?.GetHashCode() ?? 0)
-            .Aggregate((x, y) => x ^ y);
     /// <summary>Returns the hash code for the current <see cref="ValueObject" />.</summary>
     /// <returns>A hash code for the current <see cref="ValueObject" />.</returns>
+    public override int GetHashCode()
+        => GetEqualityComponents()
+           .Select(x => x?.GetHashCode() ?? 0)
+           .Aggregate((x, y) => x ^ y);
 }
