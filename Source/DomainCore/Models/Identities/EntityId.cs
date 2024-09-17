@@ -1,7 +1,7 @@
 ﻿namespace Erdmier.DomainCore.Models.Identities;
 
-/// <summary>Represents the Id of an <see cref="Entity{TId}" />.</summary>
-/// <typeparam name="TId">The type behind the id value.</typeparam>
+/// <summary>Represents the id of an <see cref="Entity{TId}" />.</summary>
+/// <typeparam name="TId">The underlying type of the id (e.g., <see cref="Guid" />).</typeparam>
 public abstract class EntityId<TId> : ValueObject
 {
     protected EntityId(TId value) => Value = value;
