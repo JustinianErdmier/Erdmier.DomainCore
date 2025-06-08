@@ -7,8 +7,8 @@ public abstract class AggregateRoot<TId, TIdType> : Entity<TId>
     where TId : AggregateRootId<TIdType>
 {
     protected AggregateRoot(TId id)
-        : base(id)
-        => Id = id;
+        : base(id) =>
+        Id = id;
 
     protected AggregateRoot()
     { }
@@ -20,8 +20,8 @@ public abstract class AggregateRoot<TId, TIdType> : Entity<TId>
         // ReSharper disable once UnusedMember.Global
         get => base.Id;
 
-#pragma warning disable CA1061
+    #pragma warning disable CA1061
         private init => base.Id = (TId)value;
-#pragma warning restore CA1061
+    #pragma warning restore CA1061
     }
 }

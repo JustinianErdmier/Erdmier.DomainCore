@@ -14,8 +14,7 @@ public abstract class ValueObject : IEquatable<ValueObject>
     /// <inheritdoc />
     public override bool Equals(object? obj)
     {
-        if (obj is null
-            || obj.GetType() != GetType())
+        if (obj is null || obj.GetType() != GetType())
         {
             return false;
         }
@@ -23,7 +22,7 @@ public abstract class ValueObject : IEquatable<ValueObject>
         ValueObject valueObject = (ValueObject)obj;
 
         return GetEqualityComponents()
-            .SequenceEqual(valueObject.GetEqualityComponents());
+            .SequenceEqual(second: valueObject.GetEqualityComponents());
     }
 
     /// <summary>Determines whether two <see cref="ValueObject" /> instances are equal.</summary>
