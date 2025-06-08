@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Erdmier.DomainCore</RootNamespace>
@@ -12,11 +12,13 @@
         <Authors>JustinianErdmier</Authors>
         <PackageProjectUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</PackageProjectUrl>
         <RepositoryUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</RepositoryUrl>
+        <PackageLicenseUrl>https://github.com/JustinianErdmier/Erdmier.DomainCore/blob/main/LICENSE.md</PackageLicenseUrl>
         <PackageTags>domain-driven-design objects; ddd objects</PackageTags>
         <Description>A small library for easily and quickly modeling your domain layer following DDD principles.</Description>
         <Copyright>Copyright (c) Justin Erdmier 2024.</Copyright>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <PackageReleaseNotes>Added .NET 9 as a target and added XML documentation.</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
