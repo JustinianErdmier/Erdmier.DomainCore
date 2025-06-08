@@ -12,7 +12,6 @@
         <Authors>JustinianErdmier</Authors>
         <PackageProjectUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</PackageProjectUrl>
         <RepositoryUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</RepositoryUrl>
-        <PackageLicenseUrl>https://github.com/JustinianErdmier/Erdmier.DomainCore/blob/main/LICENSE.md</PackageLicenseUrl>
         <PackageTags>domain-driven-design objects; ddd objects</PackageTags>
         <Description>A small library for easily and quickly modeling your domain layer following DDD principles.</Description>
         <Copyright>Copyright (c) Justin Erdmier 2024.</Copyright>
