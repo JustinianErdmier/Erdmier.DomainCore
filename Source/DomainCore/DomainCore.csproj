@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Erdmier.DomainCore</RootNamespace>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>Erdmier.DomainCore</PackageId>
-        <Version>1.0.0</Version>
+        <Version>1.1.0</Version>
         <Title>DomainCore</Title>
         <Authors>JustinianErdmier</Authors>
         <PackageProjectUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</PackageProjectUrl>
@@ -17,6 +17,7 @@
         <Copyright>Copyright (c) Justin Erdmier 2024.</Copyright>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <PackageReleaseNotes>Added .NET 9 as a target and added XML documentation.</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>

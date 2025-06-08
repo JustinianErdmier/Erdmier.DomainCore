@@ -1,15 +1,19 @@
 ﻿namespace Erdmier.DomainCore.Models;
 
-/// <summary>Represents the aggregate root in a domain-driven design context.</summary>
-/// <typeparam name="TId">The type of the unique identifier for the aggregate root, which must derive from <see cref="AggregateRootId{TIdType}" />.</typeparam>
-/// <typeparam name="TIdType">The underlying type of the unique identifier (e.g., <see cref="Guid" />).</typeparam>
+/// <summary>Represents the root entity of an aggregate.</summary>
+/// <typeparam name="TId">The type behind the ID of the aggregate root; must inherit from <see cref="AggregateRootId{TId}" />.</typeparam>
+/// <typeparam name="TIdType">The underlying type defined in the <see cref="AggregateRootId{TId}" /> implementation.</typeparam>
+/// <remarks><b>NOTE:</b> <typeparamref name="TId" /> must be an implementation of <see cref="AggregateRootId{TId}" />.</remarks>
 public abstract class AggregateRoot<TId, TIdType> : Entity<TId>
     where TId : AggregateRootId<TIdType>
 {
+    /// <summary>Instantiates a new <see cref="AggregateRoot{TId,TIdType}" />.</summary>
+    /// <param name="id">The unique identifier of the instance.</param>
     protected AggregateRoot(TId id)
         : base(id)
         => Id = id;
 
+    /// <summary>Instantiates a new <see cref="AggregateRoot{TId,TIdType}" />.</summary>
     protected AggregateRoot()
     { }
 
