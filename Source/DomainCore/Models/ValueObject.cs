@@ -1,8 +1,5 @@
 ﻿namespace Erdmier.DomainCore.Models;
 
-// TODO: Using source generation, add deconstruct method.
-// TODO: Make value object serializable.
-
 /// <summary>An immutable object.</summary>
 public abstract class ValueObject : IEquatable<ValueObject>
 {
