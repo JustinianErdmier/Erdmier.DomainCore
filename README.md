@@ -27,7 +27,7 @@ this code are syntactical.
 
 ## Road Map
 
-This isn't so much a road map as it is a few ideas I would like to see added sometime in the future. Some of these items are listed in the Issues tab and I plan to address them
+This isn't so much a road map as it is a few ideas I would like to see added sometime in the future. Some of these items are listed in the Issues tab, and I plan to address them
 soon.
 
 * **Serialization:** There is an issue with trying to deserialize and then serialize aggregates due to the inheritance combined with the type generics. However, as pointed out by
@@ -54,5 +54,5 @@ dotnet add package Erdmier.DomainCore
 
 ## Examples
 
-I am working on adding tests at the moment. Once I am finished with that, I plan to add some demos and perhaps even thorough documentation in addition to the XAML documentation in the source
-code. There is no official ETA, but it is on my list of things to do!
+I am working on adding tests at the moment. Once I am finished with that, I plan to add some demos and perhaps even thorough documentation in addition to the XAML documentation in
+the source code. There is no official ETA, but it is on my list of things to do!
