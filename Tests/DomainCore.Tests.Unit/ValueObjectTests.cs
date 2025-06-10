@@ -95,17 +95,20 @@ public class ValueObjectTests
         // Assert
         Assert.NotEqual(actualResult1, actualResult2);
     }
- [ Fact ]
+
+    [ Fact ]
     public void EqualityOperator_ShouldReturnTrue_WhenGivenIdenticalObjects()
     {
         // Arrange
         UnitedStatesPhoneNumber phoneNumber1 = new(areaCode: "812", localExchange: "675", subscriberNumber: "3057");
         UnitedStatesPhoneNumber phoneNumber2 = new(areaCode: "812", localExchange: "675", subscriberNumber: "3057");
- // Act
+
+        // Act
         bool actualResult = phoneNumber1 == phoneNumber2;
- // Assert
+
+        // Assert
         const bool expectedResult = true;
- Assert.Equal(expectedResult, actualResult);
+        Assert.Equal(expectedResult, actualResult);
     }
 
     [ Fact ]
@@ -114,11 +117,13 @@ public class ValueObjectTests
         // Arrange
         UnitedStatesPhoneNumber phoneNumber1 = new(areaCode: "812", localExchange: "675", subscriberNumber: "3057");
         UnitedStatesPhoneNumber phoneNumber2 = new(areaCode: "812", localExchange: "675", subscriberNumber: "3058");
- // Act
+
+        // Act
         bool actualResult = phoneNumber1 == phoneNumber2;
- // Assert
+
+        // Assert
         const bool expectedResult = false;
- Assert.Equal(expectedResult, actualResult);
+        Assert.Equal(expectedResult, actualResult);
     }
 
     [ Fact ]
@@ -127,11 +132,13 @@ public class ValueObjectTests
         // Arrange
         UnitedStatesPhoneNumber  phoneNumber1 = new(areaCode: "812", localExchange: "675", subscriberNumber: "3057");
         UnitedStatesPhoneNumber? phoneNumber2 = null!;
- // Act
+
+        // Act
         bool actualResult = phoneNumber1 == phoneNumber2;
- // Assert
+
+        // Assert
         const bool expectedResult = false;
- Assert.Equal(expectedResult, actualResult);
+        Assert.Equal(expectedResult, actualResult);
     }
 
     [ Fact ]
@@ -140,33 +147,41 @@ public class ValueObjectTests
         // Arrange
         UnitedStatesPhoneNumber phoneNumber1 = new(areaCode: "812", localExchange: "675", subscriberNumber: "3057");
         UnitedStatesPhoneNumber phoneNumber2 = new(areaCode: "812", localExchange: "675", subscriberNumber: "3058");
- // Act
+
+        // Act
         bool actualResult = phoneNumber1 != phoneNumber2;
- // Assert
+
+        // Assert
         const bool expectedResult = true;
- Assert.Equal(expectedResult, actualResult);
+        Assert.Equal(expectedResult, actualResult);
     }
- [ Fact ]
+
+    [ Fact ]
     public void InequalityOperator_ShouldReturnFalse_WhenGivenTheSameObjects()
     {
         // Arrange
         UnitedStatesPhoneNumber phoneNumber1 = new(areaCode: "812", localExchange: "675", subscriberNumber: "3057");
         UnitedStatesPhoneNumber phoneNumber2 = new(areaCode: "812", localExchange: "675", subscriberNumber: "3057");
- // Act
+
+        // Act
         bool actualResult = phoneNumber1 != phoneNumber2;
- // Assert
+
+        // Assert
         const bool expectedResult = false;
- Assert.Equal(expectedResult, actualResult);
+        Assert.Equal(expectedResult, actualResult);
     }
- [ Fact ]
+
+    [ Fact ]
     public void InequalityOperator_ShouldReturnTrue_WhenGivenNull()
     {
         // Arrange
         UnitedStatesPhoneNumber  phoneNumber1 = new(areaCode: "812", localExchange: "675", subscriberNumber: "3057");
         UnitedStatesPhoneNumber? phoneNumber2 = null!;
- // Act
+
+        // Act
         bool actualResult = phoneNumber1 != phoneNumber2;
- // Assert
+
+        // Assert
         const bool expectedResult = true;
 
         Assert.Equal(expectedResult, actualResult);
