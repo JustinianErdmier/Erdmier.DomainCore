@@ -14,9 +14,8 @@ public abstract class EntityId<TId> : ValueObject
     { }
 
     // ReSharper disable once MemberCanBePrivate.Global
-    // ReSharper disable once AutoPropertyCanBeMadeGetOnly.Local
     /// <summary>Gets the value of the ID.</summary>
-    public TId Value { get; private set; } = default!;
+    public TId Value { get; } = default!;
 
     /// <inheritdoc />
     protected override IEnumerable<object?> GetEqualityComponents()
