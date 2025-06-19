@@ -7,4 +7,9 @@
         <RootNamespace>Erdmier.DomainCore.Mediator</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Erdmier.DomainCore" Version="1.1.1" />
+      <PackageReference Include="Mediator.Abstractions" Version="2.1.7" />
+    </ItemGroup>
+
 </Project>
