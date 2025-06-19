@@ -5,6 +5,16 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Erdmier.DomainCore.Mediator</RootNamespace>
+        <Version>1.0.0-preview</Version>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>Erdmier.DomainCore.Mediator</PackageId>
+        <Title>DomainCore.Mediator</Title>
+        <Authors>JustinianErdmier</Authors>
+        <Description>A small library for integrating the Erdmier.DomainCore library with Mediator.</Description>
+        <Copyright>Copyright (c) Justin Erdmier 2024.</Copyright>
+        <PackageProjectUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</RepositoryUrl>
+        <PackageTags>domain-driven-design objects; ddd objects; meditor</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
