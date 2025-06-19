@@ -1,5 +1,7 @@
 ﻿using Erdmier.DomainCore.Models.Identities;
 
+using JetBrains.Annotations;
+
 namespace Erdmier.DomainCore.Mediator;
 
 public abstract class AggregateRootWithDomainEvents<TId, TIdType> : EntityWithDomainEvents<TId>
@@ -14,7 +16,7 @@ public abstract class AggregateRootWithDomainEvents<TId, TIdType> : EntityWithDo
 
     public new AggregateRootId<TIdType> Id
     {
-        get => base.Id;
+        [ UsedImplicitly ] get => base.Id;
 
 #pragma warning disable CA1061
         private init => base.Id = (TId)value;

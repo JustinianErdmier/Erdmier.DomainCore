@@ -1,5 +1,7 @@
 ﻿using Erdmier.DomainCore.Models;
 
+using JetBrains.Annotations;
+
 namespace Erdmier.DomainCore.Mediator;
 
 public abstract class EntityWithDomainEvents<TId> : Entity<TId>, IHasDomainEvents
@@ -18,6 +20,7 @@ public abstract class EntityWithDomainEvents<TId> : Entity<TId>, IHasDomainEvent
 
     public void ClearDomainEvents() => _domainEvents.Clear();
 
+    [ UsedImplicitly ]
     protected void AddDomainEvent(IDomainEvent domainEvent)
     {
         if (_domainEvents.Contains(domainEvent))
