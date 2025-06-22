@@ -1,6 +1,59 @@
-@Demo.Core_HostAddress = http://localhost:5194
+@HostAddress = https://localhost:7219
+@bookId = 01979731-8dea-74bc-8be4-ac81d2ee22cf
+@authorId = 01979731-8dea-7940-acb9-279363f9873f
 
-GET {{Demo.Core_HostAddress}}/weatherforecast/
+POST {{HostAddress}}/books/
+Content-Type: application/json
+
+{
+  "AuthorNames": [
+    "Michael Chrichton"
+  ],
+  "Title":       "Jurassic Park"
+}
+
+###
+
+GET {{HostAddress}}/books
 Accept: application/json
 
 ###
+
+GET {{HostAddress}}/books/{{bookId}}
+Accept: application/json
+
+###
+
+POST {{HostAddress}}/books/{{bookId}}
+Content-Type: application/json
+
+{
+  "Title": "Jurassic Park: Lost World"
+}
+
+###
+
+POST {{HostAddress}}/books/{{bookId}}
+Content-Type: application/json
+
+{
+  "Title": "Jurassic Park"
+}
+
+###
+
+POST {{HostAddress}}/books/{{bookId}}/authors/{{authorId}}
+Content-Type: application/json
+
+{
+  "Name": "M. Chrichton"
+}
+
+###
+
+POST {{HostAddress}}/books/{{bookId}}/authors/{{authorId}}
+Content-Type: application/json
+
+{
+  "Name": "Michael Chrichton"
+}
