@@ -4,8 +4,18 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>Erdmier.DomainCore.Mediator</RootNamespace>
         <RootNamespace>Erdmier.DomainCore.MediatorCore</RootNamespace>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>Erdmier.DomainCore.Mediator</PackageId>
+        <Version>1.0.0-preview.1</Version>
+        <Title>DomainCore.Mediator</Title>
+        <Authors>JustinianErdmier</Authors>
+        <Description>A small library for integrating the Erdmier.DomainCore library with the Mediator library by Martin Othamar.</Description>
+        <Copyright>Copyright (c) Justin Erdmier 2025.</Copyright>
+        <PackageProjectUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</RepositoryUrl>
+        <PackageTags>domain-driven-design objects; ddd objects; meditor</PackageTags>
+        <PackageReleaseNotes>Changing name of namespace. Suspected issue of namespace conflict with the Mediator library's source generation.</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
