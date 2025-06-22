@@ -7,7 +7,7 @@
         <RootNamespace>Erdmier.DomainCore.MediatorCore</RootNamespace>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>Erdmier.DomainCore.Mediator</PackageId>
-        <Version>1.0.0-preview.2</Version>
+        <Version>1.0.0</Version>
         <Title>DomainCore.Mediator</Title>
         <Authors>JustinianErdmier</Authors>
         <Description>A small library for integrating the Erdmier.DomainCore library with the Mediator library by Martin Othamar.</Description>
@@ -15,7 +15,7 @@
         <PackageProjectUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</PackageProjectUrl>
         <RepositoryUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</RepositoryUrl>
         <PackageTags>domain-driven-design objects; ddd objects; meditor</PackageTags>
-        <PackageReleaseNotes>Not all types/files are being packed...</PackageReleaseNotes>
+        <PackageReleaseNotes>Tested and ready for initial release.</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
