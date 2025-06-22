@@ -1,10 +1,4 @@
-﻿using Erdmier.DomainCore.Models;
-
-using JetBrains.Annotations;
-
-using Mediator;
-
-namespace Erdmier.DomainCore.MediatorCore;
+﻿namespace Erdmier.DomainCore.MediatorCore;
 
 /// <summary>Represents a base entity in the domain model which can be uniquely identified by an ID of type <typeparamref name="TId" />.</summary>
 /// <typeparam name="TId">The type of the unique identifier for this entity, which must derive from <see cref="ValueObject" />.</typeparam>
@@ -14,10 +8,13 @@ public abstract class EntityWithDomainEvents<TId> : Entity<TId>, IHasDomainEvent
 {
     private readonly List<IDomainEvent> _domainEvents = [];
 
+    /// <summary>Instantiates a new <see cref="EntityWithDomainEvents{TId}" />.</summary>
+    /// <param name="id">The unique identifier of the instance.</param>
     protected EntityWithDomainEvents(TId id)
         : base(id)
     { }
 
+    /// <summary>Instantiates a new <see cref="EntityWithDomainEvents{TId}" />.</summary>
     protected EntityWithDomainEvents()
     { }
 

@@ -1,4 +1,4 @@
-﻿namespace Erdmier.DomainCore.Models.Identities;
+﻿namespace Erdmier.DomainCore;
 
 /// <summary>Represents an ID of an <see cref="AggregateRoot{TId,TIdType}" />.</summary>
 /// <typeparam name="TIdType">The underlying type of the ID (e.g., <see cref="Guid" />).</typeparam>
