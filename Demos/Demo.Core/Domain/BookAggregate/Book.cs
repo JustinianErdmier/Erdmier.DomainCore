@@ -2,17 +2,19 @@
 
 public sealed class Book : AggregateRootWithDomainEvents<BookId, Guid>
 {
-    private Book(Author author, string title, BookId? id = null)
+    private readonly List<Author> _authors = [];
+
+    private Book(List<Author> authors, string title, BookId? id = null)
         : base(id ?? BookId.Create())
     {
-        Author = author;
-        Title  = title;
+        _authors = authors;
+        Title    = title;
     }
 
     private Book()
     { }
 
-    public Author Author { get; private set; } = null!;
+    public IReadOnlyList<Author> Authors => _authors.AsReadOnly();
 
     public string Title { get; private set; } = null!;
 
@@ -25,7 +27,17 @@ public sealed class Book : AggregateRootWithDomainEvents<BookId, Guid>
         Title = newTitle;
     }
 
-    public void ChangeAuthor(Author newAuthor) => Author = newAuthor;
+    public bool AddAuthor(Author author)
+    {
+        if (_authors.Contains(author))
+        {
+            return false;
+        }
 
-    public static Book Create(Author author, string title) => new(author, title);
+        _authors.Add(author);
+
+        return true;
+    }
+
+    public static Book Create(List<Author> authors, string title) => new(authors, title);
 }
