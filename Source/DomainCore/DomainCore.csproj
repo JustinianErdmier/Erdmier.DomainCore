@@ -8,8 +8,8 @@
         <Description>A small library for easily and quickly modeling your domain layer following DDD principles.</Description>
         <Summary>A small library for easily and quickly modeling your domain layer following DDD principles.</Summary>
         <PackageTags>domain-driven-design objects; ddd objects; justinian; erdmier</PackageTags>
-        <Version>1.1.2-preview</Version>
-        <PackageReleaseNotes>Fixed bug with `EntityId` class.</PackageReleaseNotes>
+        <Version>1.1.2-preview.1</Version>
+        <PackageReleaseNotes>Setting up CI/CD.</PackageReleaseNotes>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)'=='Debug'">
@@ -23,8 +23,14 @@
     <ItemGroup>
         <Folder Include="Properties\PublishProfiles\" />
     </ItemGroup>
+
     <ItemGroup>
         <None Include="..\..\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+
+        <None Include="..\..\LICENSE.md">
             <Pack>True</Pack>
             <PackagePath>\</PackagePath>
         </None>

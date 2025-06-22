@@ -1,21 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
         <RootNamespace>Erdmier.DomainCore.MediatorCore</RootNamespace>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>Erdmier.DomainCore.Mediator</PackageId>
-        <Version>1.0.0</Version>
         <Title>DomainCore.Mediator</Title>
-        <Authors>JustinianErdmier</Authors>
         <Description>A small library for integrating the Erdmier.DomainCore library with the Mediator library by Martin Othamar.</Description>
-        <Copyright>Copyright (c) Justin Erdmier 2025.</Copyright>
-        <PackageProjectUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</RepositoryUrl>
-        <PackageTags>domain-driven-design objects; ddd objects; meditor</PackageTags>
-        <PackageReleaseNotes>Tested and ready for initial release.</PackageReleaseNotes>
+        <Summary>A small library for integrating the Erdmier.DomainCore library with the Mediator library by Martin Othamar.</Summary>
+        <PackageTags>domain-driven-design objects; ddd objects; justinian; erdmier; meditor</PackageTags>
+        <Version>1.0.1-preview.1</Version>
+        <PackageReleaseNotes>Setting up CI/CD.</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
@@ -23,6 +16,31 @@
         <PackageReference Include="JetBrains.Annotations" Version="2024.3.0" />
         <PackageReference Include="Mediator.Abstractions" Version="2.1.7" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.6" />
+    </ItemGroup>
+
+    <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+        <DefineConstants>TRACE;DEBUG</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Folder Include="Properties\PublishProfiles\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+
+        <None Include="..\..\LICENSE.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+        <!--        <None Include="$(SolutionDir)img\icon.png" Pack="true" Visible="false" PackagePath="" />-->
     </ItemGroup>
 
 </Project>
