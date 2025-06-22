@@ -9,7 +9,7 @@
         <Summary>A small library for easily and quickly modeling your domain layer following DDD principles.</Summary>
         <PackageTags>domain-driven-design objects; ddd objects; justinian; erdmier</PackageTags>
         <Version>1.1.2-preview.3</Version>
-        <PackageReleaseNotes>Setting up CI/CD pipelines.</PackageReleaseNotes>
+        <PackageReleaseNotes>Setting up CI/CD pipeline.</PackageReleaseNotes>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)'=='Debug'">
