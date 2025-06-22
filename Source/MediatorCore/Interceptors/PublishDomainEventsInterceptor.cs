@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace Erdmier.DomainCore.MediatorCore;
 
+// ReSharper disable once ClassWithVirtualMembersNeverInherited.Global
 /// <summary>
 ///     An EF Core interceptor that listens for the <see cref="DbContext.SaveChanges()" /> or <see cref="DbContext.SaveChangesAsync(System.Threading.CancellationToken)" />
 ///     operations and publishes domain events associated with domain entities - which implement <see cref="IHasDomainEvents" /> - tracked by the DbContext's ChangeTracker.
