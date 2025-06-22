@@ -5,6 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Erdmier.DomainCore.Mediator</RootNamespace>
+        <RootNamespace>Erdmier.DomainCore.MediatorCore</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
