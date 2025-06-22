@@ -1,6 +1,6 @@
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddOpenApi()
+builder.Services.AddCoreServices()
        .AddPersistence(builder.Configuration, builder.Environment);
 
 WebApplication app = builder.Build();

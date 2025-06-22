@@ -1,7 +1,18 @@
-﻿namespace Demo.Core.Extensions;
+﻿using Demo.Core.Persistence.Interceptors;
+
+namespace Demo.Core.Extensions;
 
 public static class DependencyInjectionExtensions
 {
+    public static IServiceCollection AddCoreServices(this IServiceCollection services)
+    {
+        services.AddOpenApi();
+
+        services.AddMediator(options => options.ServiceLifetime = ServiceLifetime.Scoped);
+
+        return services;
+    }
+
     public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration, IHostEnvironment environment)
     {
         string connectionString = configuration[AppDbContext.ConnectionStringKey]
@@ -17,6 +28,8 @@ public static class DependencyInjectionExtensions
 
             options.UseSqlServer(connectionString, sqlServerOptions => sqlServerOptions.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery));
         });
+
+        services.AddScoped<PublishDomainEventsInterceptor>();
 
         return services;
     }

@@ -1,12 +1,16 @@
-﻿namespace Demo.Core.Persistence;
+﻿using Demo.Core.Persistence.Interceptors;
+
+namespace Demo.Core.Persistence;
 
 public sealed class AppDbContext : DbContext
 {
     public const string ConnectionStringKey = "ConnectionStrings:DemoProjectConnectionString";
 
-    public AppDbContext(DbContextOptions<AppDbContext> options)
+    private readonly PublishDomainEventsInterceptor _publishDomainEventsInterceptor;
+
+    public AppDbContext(DbContextOptions<AppDbContext> options, PublishDomainEventsInterceptor publishDomainEventsInterceptor)
         : base(options)
-    { }
+        => _publishDomainEventsInterceptor = publishDomainEventsInterceptor;
 
     public DbSet<Book> Books => Set<Book>();
 
@@ -15,5 +19,12 @@ public sealed class AppDbContext : DbContext
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.AddInterceptors(_publishDomainEventsInterceptor);
+
+        base.OnConfiguring(optionsBuilder);
     }
 }
