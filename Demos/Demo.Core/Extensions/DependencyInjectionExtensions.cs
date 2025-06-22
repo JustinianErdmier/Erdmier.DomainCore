@@ -27,8 +27,6 @@ public static class DependencyInjectionExtensions
             options.UseSqlServer(connectionString, sqlServerOptions => sqlServerOptions.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery));
         });
 
-        services.AddScoped<PublishDomainEventsInterceptor>();
-
         return services;
     }
 }

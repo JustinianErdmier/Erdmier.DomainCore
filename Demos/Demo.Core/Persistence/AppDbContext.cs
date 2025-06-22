@@ -21,7 +21,7 @@ public sealed class AppDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.AddInterceptors(_publishDomainEventsInterceptor);
+        optionsBuilder.UseDomainMediatorCore(_publishDomainEventsInterceptor);
 
         base.OnConfiguring(optionsBuilder);
     }

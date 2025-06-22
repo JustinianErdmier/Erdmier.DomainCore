@@ -9,7 +9,8 @@ using Demo.Core.Books.Responses;
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCoreServices()
-       .AddPersistence(builder.Configuration, builder.Environment);
+       .AddPersistence(builder.Configuration, builder.Environment)
+       .AddDomainMediatorCore();
 
 WebApplication app = builder.Build();
 
