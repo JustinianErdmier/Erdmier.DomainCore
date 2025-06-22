@@ -9,4 +9,6 @@ global using Demo.Core.Persistence;
 
 global using Erdmier.DomainCore.Mediator;
 
+global using Mediator;
+
 global using Microsoft.EntityFrameworkCore;

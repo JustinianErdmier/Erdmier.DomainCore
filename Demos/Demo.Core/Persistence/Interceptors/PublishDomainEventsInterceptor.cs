@@ -1,6 +1,4 @@
-﻿using Mediator;
-
-using Microsoft.EntityFrameworkCore.Diagnostics;
+﻿using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace Demo.Core.Persistence.Interceptors;
 

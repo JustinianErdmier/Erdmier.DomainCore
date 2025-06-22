@@ -1,6 +1,4 @@
-﻿using Mediator;
-
-namespace Demo.Core.EventHandlers;
+﻿namespace Demo.Core.EventHandlers;
 
 public sealed class BookTitleChangedEventHandler : INotificationHandler<BookTitleChangedEvent>
 {
