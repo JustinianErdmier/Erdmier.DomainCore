@@ -12,10 +12,13 @@ public abstract class EntityWithDomainEvents<TId> : Entity<TId>, IHasDomainEvent
 {
     private readonly List<IDomainEvent> _domainEvents = [];
 
+    /// <summary>Instantiates a new <see cref="EntityWithDomainEvents{TId}" />.</summary>
+    /// <param name="id">The unique identifier of the instance.</param>
     protected EntityWithDomainEvents(TId id)
         : base(id)
     { }
 
+    /// <summary>Instantiates a new <see cref="EntityWithDomainEvents{TId}" />.</summary>
     protected EntityWithDomainEvents()
     { }
 

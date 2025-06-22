@@ -9,10 +9,13 @@ namespace Erdmier.DomainCore.MediatorCore;
 public abstract class AggregateRootWithDomainEvents<TId, TIdType> : EntityWithDomainEvents<TId>
     where TId : AggregateRootId<TIdType>
 {
+    /// <summary>Instantiates a new <see cref="AggregateRootWithDomainEvents{TId,TIdType}" />.</summary>
+    /// <param name="id">The unique identifier of the instance.</param>
     protected AggregateRootWithDomainEvents(TId id)
         : base(id)
         => Id = id;
 
+    /// <summary>Instantiates a new <see cref="AggregateRootWithDomainEvents{TId,TIdType}" />.</summary>
     protected AggregateRootWithDomainEvents()
     { }
 
