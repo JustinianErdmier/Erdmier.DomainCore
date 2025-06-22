@@ -1,6 +1,4 @@
-﻿using JetBrains.Annotations;
-
-namespace Erdmier.DomainCore.MediatorCore;
+﻿namespace Erdmier.DomainCore.MediatorCore;
 
 /// <summary>Represents the root entity of an aggregate.</summary>
 /// <typeparam name="TId">The type behind the ID of the aggregate root; must inherit from <see cref="AggregateRootId{TId}" />.</typeparam>

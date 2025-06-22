@@ -1,6 +1,4 @@
-﻿using JetBrains.Annotations;
-
-namespace Erdmier.DomainCore.MediatorCore;
+﻿namespace Erdmier.DomainCore.MediatorCore;
 
 /// <summary>Represents an abstraction for domain model entities capable of capturing domain events.</summary>
 /// <remarks>

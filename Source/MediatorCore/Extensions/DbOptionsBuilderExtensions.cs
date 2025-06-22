@@ -1,8 +1,4 @@
-﻿using JetBrains.Annotations;
-
-using Microsoft.EntityFrameworkCore;
-
-namespace Erdmier.DomainCore.MediatorCore;
+﻿namespace Erdmier.DomainCore.MediatorCore;
 
 /// <summary>Provides extension methods for configuring <see cref="DbContextOptionsBuilder" /> with Mediator's event publishing functionality.</summary>
 [ UsedImplicitly ]

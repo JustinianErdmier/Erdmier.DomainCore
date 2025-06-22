@@ -1,7 +1,4 @@
-﻿using Mediator;
-
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
+﻿using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace Erdmier.DomainCore.MediatorCore;
 
