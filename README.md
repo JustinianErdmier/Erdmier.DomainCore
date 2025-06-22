@@ -16,8 +16,8 @@ this code are syntactical.
 
 `Erdmier.DomainCore.Mediator`:
 
-_![NuGet Version](https://img.shields.io/nuget/v/Erdmier.DomainCore.Mediator?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore.Mediator%2F)_
-_![NuGet Downloads](https://img.shields.io/nuget/dt/Erdmier.DomainCore.Mediator?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore.Mediator%2F)_
+[![NuGet Version](https://img.shields.io/nuget/v/Erdmier.DomainCore.Mediator?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore.Mediator%2F)](https://www.nuget.org/packages/Erdmier.DomainCore.Mediator/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/Erdmier.DomainCore.Mediator?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore.Mediator%2F)(https://www.nuget.org/packages/Erdmier.DomainCore.Mediator/)
 
 ## Table of Contents
 
