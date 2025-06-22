@@ -1,4 +1,4 @@
-﻿namespace Erdmier.DomainCore.Models;
+﻿namespace Erdmier.DomainCore;
 
 /// <summary>An immutable object.</summary>
 public abstract class ValueObject : IEquatable<ValueObject>
