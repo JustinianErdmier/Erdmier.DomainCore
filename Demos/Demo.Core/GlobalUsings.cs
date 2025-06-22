@@ -7,7 +7,7 @@ global using Demo.Core.Domain.BookAggregate.ValueObjects;
 global using Demo.Core.Extensions;
 global using Demo.Core.Persistence;
 
-global using Erdmier.DomainCore.Mediator;
+global using Erdmier.DomainCore.MediatorCore;
 
 global using Mediator;
 
