@@ -1,6 +1,4 @@
-﻿using Erdmier.DomainCore.Models.Identities;
-
-using JetBrains.Annotations;
+﻿using JetBrains.Annotations;
 
 namespace Erdmier.DomainCore.MediatorCore;
 
