@@ -1,4 +1,4 @@
-﻿namespace Demo.Core.EventHandlers;
+﻿namespace Demo.Core.Books.EventHandlers;
 
 public sealed class BookTitleChangedEventHandler : INotificationHandler<BookTitleChangedEvent>
 {

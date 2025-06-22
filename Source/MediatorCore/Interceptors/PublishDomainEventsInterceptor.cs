@@ -1,8 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore.Diagnostics;
+﻿using Mediator;
 
-namespace Demo.Core.Persistence.Interceptors;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 
-public sealed class PublishDomainEventsInterceptor : SaveChangesInterceptor
+namespace Erdmier.DomainCore.MediatorCore;
+
+public class PublishDomainEventsInterceptor : SaveChangesInterceptor
 {
     private readonly IPublisher _publisher;
 
@@ -28,7 +31,7 @@ public sealed class PublishDomainEventsInterceptor : SaveChangesInterceptor
         return await base.SavingChangesAsync(eventData, result, cancellationToken);
     }
 
-    private async Task PublishDomainEvents(DbContext? dbContext, CancellationToken cancellationToken = default)
+    protected virtual async Task PublishDomainEvents(DbContext? dbContext, CancellationToken cancellationToken = default)
     {
         if (dbContext is null)
         {

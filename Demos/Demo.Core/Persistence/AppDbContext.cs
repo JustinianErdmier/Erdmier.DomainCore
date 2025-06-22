@@ -1,6 +1,4 @@
-﻿using Demo.Core.Persistence.Interceptors;
-
-namespace Demo.Core.Persistence;
+﻿namespace Demo.Core.Persistence;
 
 public sealed class AppDbContext : DbContext
 {

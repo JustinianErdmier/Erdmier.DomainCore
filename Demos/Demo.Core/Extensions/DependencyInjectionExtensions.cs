@@ -1,6 +1,4 @@
-﻿using Demo.Core.Persistence.Interceptors;
-
-namespace Demo.Core.Extensions;
+﻿namespace Demo.Core.Extensions;
 
 public static class DependencyInjectionExtensions
 {
