@@ -7,12 +7,12 @@
         <Description>A small library for integrating the Erdmier.DomainCore library with the Mediator library by Martin Othamar.</Description>
         <Summary>A small library for integrating the Erdmier.DomainCore library with the Mediator library by Martin Othamar.</Summary>
         <PackageTags>domain-driven-design objects; ddd objects; justinian; erdmier; meditor</PackageTags>
-        <Version>1.0.1-preview.1</Version>
-        <PackageReleaseNotes>Setting up CI/CD pipelines.</PackageReleaseNotes>
+        <Version>1.0.1</Version>
+        <PackageReleaseNotes>Added documentation to types and members.</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Erdmier.DomainCore" Version="1.1.1" />
+        <PackageReference Include="Erdmier.DomainCore" Version="2.0.0" />
         <PackageReference Include="JetBrains.Annotations" Version="2024.3.0" />
         <PackageReference Include="Mediator.Abstractions" Version="2.1.7" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.6" />
