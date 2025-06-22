@@ -9,7 +9,6 @@
     <ItemGroup>
         <PackageReference Include="Erdmier.DomainCore" Version="1.1.1" />
         <!--        <PackageReference Include="Erdmier.DomainCore.Mediator" Version="1.0.0-preview" />-->
-        <PackageReference Include="Mediator.Abstractions" Version="2.1.7" />
         <PackageReference Include="Mediator.SourceGenerator" Version="2.1.7">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -24,7 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\Source\Mediator\Mediator.csproj" />
+        <ProjectReference Include="..\..\Source\MediatorCore\MediatorCore.csproj" />
     </ItemGroup>
 
 </Project>

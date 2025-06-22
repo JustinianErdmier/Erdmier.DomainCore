@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{B8EFCA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainCore", "Source\DomainCore\DomainCore.csproj", "{275C9EBE-D6CA-B8FA-751C-D3C743821F7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator", "Source\Mediator\Mediator.csproj", "{0DD524CA-AF80-44A7-8EBC-015CDE16EE69}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorCore", "Source\MediatorCore\MediatorCore.csproj", "{0DD524CA-AF80-44A7-8EBC-015CDE16EE69}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demos", "Demos", "{085D1A3C-55F6-42A4-A1E6-46DF8F4A4853}"
 EndProject

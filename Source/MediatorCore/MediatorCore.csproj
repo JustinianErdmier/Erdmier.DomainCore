@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
         <RootNamespace>Erdmier.DomainCore.MediatorCore</RootNamespace>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageId>Erdmier.DomainCore.Mediator</PackageId>
+        <PackageId>Erdmier.DomainCore.MediatorCore</PackageId>
         <Version>1.0.0-preview.1</Version>
         <Title>DomainCore.Mediator</Title>
         <Authors>JustinianErdmier</Authors>
