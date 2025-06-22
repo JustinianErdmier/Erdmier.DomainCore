@@ -18,7 +18,7 @@ public abstract class AggregateRootWithDomainEvents<TId, TIdType> : EntityWithDo
     { }
 
     /// <summary>Gets the unique identifier of the aggregate root.</summary>
-    /// <remarks>This property overrides the base <see cref="EntityWithDomainEvents{TId}.Id" /> property to ensure it is of type <see cref="AggregateRootId{TId}" />.</remarks>
+    /// <remarks>This property overrides the base <see cref="Entity{TId}.Id" /> property to ensure it is of type <see cref="AggregateRootId{TId}" />.</remarks>
     public new AggregateRootId<TIdType> Id
     {
         [ UsedImplicitly ] get => base.Id;
