@@ -1,11 +1,11 @@
 ﻿# `Erdmier.DomainCore`
 
-_![NuGet Version](https://img.shields.io/nuget/v/Erdmier.DomainCore?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore%2F)_
-_![NuGet Downloads](https://img.shields.io/nuget/dt/Erdmier.DomainCore?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore%2F)_
-_![GitHub Release Date](https://img.shields.io/github/release-date/JustinianErdmier/Erdmier.DomainCore)_
-_![GitHub last commit](https://img.shields.io/github/last-commit/JustinianErdmier/Erdmier.DomainCore)_
-_![GitHub contributors](https://img.shields.io/github/contributors/JustinianErdmier/Erdmier.DomainCore)_
-_![GitHub issue custom search](https://img.shields.io/github/issues-search?query=repo%3AJustinianErdmier%2FErdmier.DomainCore%20is%3Aopen&label=issues%20%26%20tasks)_
+[![NuGet Version](https://img.shields.io/nuget/v/Erdmier.DomainCore?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore%2F)](https://www.nuget.org/packages/Erdmier.DomainCore/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/Erdmier.DomainCore?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore%2F)](https://www.nuget.org/packages/Erdmier.DomainCore/)
+[![GitHub Release Date](https://img.shields.io/github/release-date/JustinianErdmier/Erdmier.DomainCore)](https://github.com/JustinianErdmier/Erdmier.DomainCore/releases)
+[![GitHub last commit](https://img.shields.io/github/last-commit/JustinianErdmier/Erdmier.DomainCore)](https://github.com/JustinianErdmier/Erdmier.DomainCore/commits/main/)
+[![GitHub contributors](https://img.shields.io/github/contributors/JustinianErdmier/Erdmier.DomainCore)](https://github.com/JustinianErdmier/Erdmier.DomainCore/graphs/contributors)
+[![GitHub issue custom search](https://img.shields.io/github/issues-search?query=repo%3AJustinianErdmier%2FErdmier.DomainCore%20is%3Aopen&label=issues%20%26%20tasks)](https://github.com/JustinianErdmier/Erdmier.DomainCore/issues)
 
 A small and lightweight library designed to give you the core essentials for implementing your domain layer (following Domain Driven Design). The primary benefit to this library is
 that it works well with EF Core. Extremely, heavily based on the design and implementation by [Amichai Mantinband](https://github.com/amantinband) in
@@ -16,8 +16,8 @@ this code are syntactical.
 
 `Erdmier.DomainCore.Mediator`:
 
-_![NuGet Version](https://img.shields.io/nuget/v/Erdmier.DomainCore.Mediator?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore.Mediator%2F)_
-_![NuGet Downloads](https://img.shields.io/nuget/dt/Erdmier.DomainCore.Mediator?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore.Mediator%2F)_
+[![NuGet Version](https://img.shields.io/nuget/v/Erdmier.DomainCore.Mediator?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore.Mediator%2F)](https://www.nuget.org/packages/Erdmier.DomainCore.Mediator/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/Erdmier.DomainCore.Mediator?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore.Mediator%2F)](https://www.nuget.org/packages/Erdmier.DomainCore.Mediator/)
 
 ## Table of Contents
 
@@ -89,7 +89,8 @@ In short:
 5. Ensure your code is properly formatted and is consistent with the existing code.
 6. Ensure all types, members, etc. are properly documented with XML comments.
 7. Submit your PR!
-    - PRs should merge into the respective develop branch. For example, if your feature branch was for the primary `core` library, then your PR should be merging into `dev/core`.
+    - PRs should merge into the respective development branch. For example, if your feature branch was for the primary `core` library, then your PR should be merging into
+      `develop/core`.
 
 Some helpful resources by [Ardalis](https://github.com/ardalis):
 
@@ -117,7 +118,7 @@ sequenceDiagram
   participant d as develop/{library-name}
   participant f as feature/{library-name}/{issue-number}
   participant s as staging/{library-name}
-  participant r as release/{library-name}/v{version-number}
+  participant r as release/{library-name}
   %%participant h as hotfix/{library-name}/{issue-number}
 
   m->>f: create feature branch from main
@@ -135,12 +136,11 @@ sequenceDiagram
 2. When you start a new feature branch, you create it off of `main`. We do this, as opposed to creating it off the corresponding `develop` branch, to ensure that the feature branch
    is started with the most recent official changes.
 3. After finishing your work, but before creating your PR, you'll want to merge the corresponding development branch into your feature branch. This ensures your work has any
-   recently
-   completed features yet to be released. Then, when your PR gets approved, the corresponding development branch will not only have the latest releases (i.e., be current with the
-   `main` branch), it will also have all the new code ready for the next release.
+   recently completed features yet to be released. Then, when your PR gets approved, the corresponding development branch will not only have the latest releases (i.e., be current
+   with the `main` branch), it will also have all the new code ready for the next release.
 4. Once the development branch is at a good point to be released, it's moved into a staging branch where it is exhaustively tested. Once it passes all tests and I am satisfied it
    works without issue, it is then merged into a new release branch and deployed to NuGet.
-5. Finally, after being deployed, the release branch is merged into `main` and deleted.
+5. Finally, after being deployed, the release branch is merged into `main`.
 
 This GitFlow ensures that A) the `main` branch is always our current, source-of-truth; B) the development branches are not only routinely caught up with `main` but ahead; C)
 features are completely tried and tested before release; and D) everything comes back full-circle.
@@ -150,11 +150,11 @@ features are completely tried and tested before release; and D) everything comes
 - `core` - name of primary library `Erdmier.DomainCore`
     - `develop/core`
     - `staging/core`
-    - `release/core/v{version-number}` (e.g., `release/core/v1.0.0`)
+    - `release/core`
 - `mediator` - name of sub-library `Erdmier.DomainCore.Mediator`
     - `develop/mediator`
     - `staging/mediator`
-    - `release/mediator/v{version-number}` (e.g., `release/mediator/v1.0.0`)
+    - `release/mediator`
 
 ## Getting Started
 

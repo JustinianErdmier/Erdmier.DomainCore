@@ -1,6 +1,4 @@
-﻿using Mediator;
-
-namespace Erdmier.DomainCore.MediatorCore;
+﻿namespace Erdmier.DomainCore.MediatorCore;
 
 /// <summary>Represents a marker interface for domain events in a domain-driven design architecture.</summary>
 /// <remarks>
