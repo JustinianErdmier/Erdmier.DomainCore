@@ -2,10 +2,10 @@
 
 [![NuGet Version](https://img.shields.io/nuget/v/Erdmier.DomainCore?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore%2F)](https://www.nuget.org/packages/Erdmier.DomainCore/)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/Erdmier.DomainCore?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore%2F)](https://www.nuget.org/packages/Erdmier.DomainCore/)
-_![GitHub Release Date](https://img.shields.io/github/release-date/JustinianErdmier/Erdmier.DomainCore)_
-_![GitHub last commit](https://img.shields.io/github/last-commit/JustinianErdmier/Erdmier.DomainCore)_
-_![GitHub contributors](https://img.shields.io/github/contributors/JustinianErdmier/Erdmier.DomainCore)_
-_![GitHub issue custom search](https://img.shields.io/github/issues-search?query=repo%3AJustinianErdmier%2FErdmier.DomainCore%20is%3Aopen&label=issues%20%26%20tasks)_
+[![GitHub Release Date](https://img.shields.io/github/release-date/JustinianErdmier/Erdmier.DomainCore)](https://github.com/JustinianErdmier/Erdmier.DomainCore/releases)
+[![GitHub last commit](https://img.shields.io/github/last-commit/JustinianErdmier/Erdmier.DomainCore)](https://github.com/JustinianErdmier/Erdmier.DomainCore/commits/main/)
+[![GitHub contributors](https://img.shields.io/github/contributors/JustinianErdmier/Erdmier.DomainCore)](https://github.com/JustinianErdmier/Erdmier.DomainCore/graphs/contributors)
+[![GitHub issue custom search](https://img.shields.io/github/issues-search?query=repo%3AJustinianErdmier%2FErdmier.DomainCore%20is%3Aopen&label=issues%20%26%20tasks)](https://github.com/JustinianErdmier/Erdmier.DomainCore/issues)
 
 A small and lightweight library designed to give you the core essentials for implementing your domain layer (following Domain Driven Design). The primary benefit to this library is
 that it works well with EF Core. Extremely, heavily based on the design and implementation by [Amichai Mantinband](https://github.com/amantinband) in
