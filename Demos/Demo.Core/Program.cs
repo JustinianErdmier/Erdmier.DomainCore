@@ -1,10 +1,18 @@
-var builder = WebApplication.CreateBuilder(args);
+using Demo.Core.Books.Commands.ChangeAuthorName;
+using Demo.Core.Books.Commands.ChangeBookTitle;
+using Demo.Core.Books.Commands.CreateBook;
+using Demo.Core.Books.Queries.GetAllBooks;
+using Demo.Core.Books.Queries.GetBookById;
+using Demo.Core.Books.Requests;
+using Demo.Core.Books.Responses;
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-var app = builder.Build();
+builder.Services.AddCoreServices()
+       .AddPersistence(builder.Configuration, builder.Environment)
+       .AddDomainMediatorCore();
+
+WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -14,25 +22,58 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[] { "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching" };
+app.MapPost(pattern: "/books",
+            async (CreateBookRequest request, ISender sender, CancellationToken cancellationToken) =>
+            {
+                CreateBookCommand command = CreateBookCommand.Create(request.AuthorNames, request.Title);
 
-app.MapGet("/weatherforecast",
-           () =>
+                BookId bookId = await sender.Send(command, cancellationToken);
+
+                return Results.Created($"/books/{bookId}",
+                                       new
+                                       {
+                                           BookId = bookId.Value
+                                       });
+            });
+
+app.MapGet(pattern: "/books",
+           async (ISender sender, CancellationToken cancellationToken) =>
            {
-               var forecast = Enumerable.Range(1, 5)
-                                        .Select(index =>
-                                                    new WeatherForecast(DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                                                                        Random.Shared.Next(-20, 55),
-                                                                        summaries[Random.Shared.Next(summaries.Length)]))
-                                        .ToArray();
+               GetAllBooksQuery query = GetAllBooksQuery.Create();
 
-               return forecast;
-           })
-   .WithName("GetWeatherForecast");
+               List<Book> books = await sender.Send(query, cancellationToken);
+
+               return Results.Ok(BookResponse.Create(books));
+           });
+
+app.MapGet(pattern: "/books/{id:guid}",
+           async (Guid id, ISender sender, CancellationToken cancellationToken) =>
+           {
+               GetBookByIdQuery query = GetBookByIdQuery.Create(BookId.Create(id));
+
+               Book? book = await sender.Send(query, cancellationToken);
+
+               return book is null ? Results.NotFound() : Results.Ok(BookResponse.Create(book));
+           });
+
+app.MapPost(pattern: "/books/{id:guid}",
+            async (Guid id, ChangeBookTitleRequest request, ISender sender, CancellationToken cancellationToken) =>
+            {
+                ChangeBookTitleCommand command = ChangeBookTitleCommand.Create(BookId.Create(id), request.Title);
+
+                bool result = await sender.Send(command, cancellationToken);
+
+                return result ? Results.Ok() : Results.BadRequest();
+            });
+
+app.MapPost(pattern: "/books/{bookId:guid}/authors/{id:guid}",
+            async (Guid bookId, Guid id, ChangeAuthorNameRequest request, ISender sender, CancellationToken cancellationToken) =>
+            {
+                ChangeAuthorNameCommand command = ChangeAuthorNameCommand.Create(BookId.Create(bookId), AuthorId.Create(id), request.Name);
+
+                bool result = await sender.Send(command, cancellationToken);
+
+                return result ? Results.Ok() : Results.BadRequest();
+            });
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}

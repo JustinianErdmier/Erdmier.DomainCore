@@ -1,28 +1,40 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
         <RootNamespace>Erdmier.DomainCore</RootNamespace>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>Erdmier.DomainCore</PackageId>
-        <Version>1.1.1</Version>
         <Title>DomainCore</Title>
-        <Authors>JustinianErdmier</Authors>
-        <PackageProjectUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/JustinErdmier/Erdmier.DomainCore</RepositoryUrl>
-        <PackageTags>domain-driven-design objects; ddd objects</PackageTags>
+        <PackageTags>domain-driven-design objects; ddd objects; erdmier; justinian</PackageTags>
         <Description>A small library for easily and quickly modeling your domain layer following DDD principles.</Description>
-        <Copyright>Copyright (c) Justin Erdmier 2024.</Copyright>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
-        <PackageReleaseNotes>Fixed bug with `EntityId` class.</PackageReleaseNotes>
+        <Summary>A small library for easily and quickly modeling your domain layer following DDD principles.</Summary>
+        <PackageTags>domain-driven-design objects; ddd objects; justinian; erdmier</PackageTags>
+        <Version>2.0.0</Version>
+        <PackageReleaseNotes>Updated types to share single namespace for easier end-user consumption.</PackageReleaseNotes>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+        <DefineConstants>TRACE;DEBUG</DefineConstants>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="..\..\README.md" Pack="true" PackagePath="\" />
-        <None Include="..\..\LICENSE.md" Pack="true" PackagePath="\" />
+        <Folder Include="Properties\PublishProfiles\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+
+        <None Include="..\..\LICENSE.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+        <!--        <None Include="$(SolutionDir)img\icon.png" Pack="true" Visible="false" PackagePath="" />-->
     </ItemGroup>
 
 </Project>

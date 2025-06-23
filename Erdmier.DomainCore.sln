@@ -17,11 +17,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainCore.Tests.Unit", "Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainCore.Tests.Models", "Tests\DomainCore.Tests.Models\DomainCore.Tests.Models.csproj", "{82044F8F-E1EE-4AEE-812E-545DF792072A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mediator", "Source\Mediator\Mediator.csproj", "{0DD524CA-AF80-44A7-8EBC-015CDE16EE69}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorCore", "Source\MediatorCore\MediatorCore.csproj", "{0DD524CA-AF80-44A7-8EBC-015CDE16EE69}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demos", "Demos", "{085D1A3C-55F6-42A4-A1E6-46DF8F4A4853}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Core", "Demos\Demo.Core\Demo.Core.csproj", "{85C1D8C8-FA6A-4CD7-91A8-B40FBFF042E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{C3718091-7A26-4120-AD2D-4F0DE21B8106}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{ABCBBF7F-92EB-4003-8E6D-177385F259D9}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build.yml = .github\workflows\build.yml
+		.github\workflows\publish.yml = .github\workflows\publish.yml
+		.github\workflows\publish-mediator.yml = .github\workflows\publish-mediator.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,5 +65,7 @@ Global
 		{82044F8F-E1EE-4AEE-812E-545DF792072A} = {6B2A8486-A157-40B8-980A-4EEE963013EE}
 		{0DD524CA-AF80-44A7-8EBC-015CDE16EE69} = {B8EFCA5F-814F-285C-A8CB-F00F14650265}
 		{85C1D8C8-FA6A-4CD7-91A8-B40FBFF042E7} = {085D1A3C-55F6-42A4-A1E6-46DF8F4A4853}
+		{C3718091-7A26-4120-AD2D-4F0DE21B8106} = {F6F462E1-D058-33EE-9A35-BBD49B846676}
+		{ABCBBF7F-92EB-4003-8E6D-177385F259D9} = {C3718091-7A26-4120-AD2D-4F0DE21B8106}
 	EndGlobalSection
 EndGlobal

@@ -1,16 +1,23 @@
 ﻿# `Erdmier.DomainCore`
 
-_![NuGet Version](https://img.shields.io/nuget/v/Erdmier.DomainCore?style=for-the-badge&link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore%2F)_
-_![NuGet Downloads](https://img.shields.io/nuget/dt/Erdmier.DomainCore?style=for-the-badge&link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore%2F)_
-_![GitHub Release Date](https://img.shields.io/github/release-date/JustinianErdmier/Erdmier.DomainCore?style=for-the-badge)_
-_![GitHub last commit](https://img.shields.io/github/last-commit/JustinianErdmier/Erdmier.DomainCore?style=for-the-badge)_
-_![GitHub contributors](https://img.shields.io/github/contributors/JustinianErdmier/Erdmier.DomainCore?style=for-the-badge)_
-_![GitHub issue custom search](https://img.shields.io/github/issues-search?query=repo%3AJustinianErdmier%2FErdmier.DomainCore%20is%3Aopen&style=for-the-badge&label=issues%20%26%20tasks)_
+[![NuGet Version](https://img.shields.io/nuget/v/Erdmier.DomainCore?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore%2F)](https://www.nuget.org/packages/Erdmier.DomainCore/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/Erdmier.DomainCore?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore%2F)](https://www.nuget.org/packages/Erdmier.DomainCore/)
+[![GitHub Release Date](https://img.shields.io/github/release-date/JustinianErdmier/Erdmier.DomainCore)](https://github.com/JustinianErdmier/Erdmier.DomainCore/releases)
+[![GitHub last commit](https://img.shields.io/github/last-commit/JustinianErdmier/Erdmier.DomainCore)](https://github.com/JustinianErdmier/Erdmier.DomainCore/commits/main/)
+[![GitHub contributors](https://img.shields.io/github/contributors/JustinianErdmier/Erdmier.DomainCore)](https://github.com/JustinianErdmier/Erdmier.DomainCore/graphs/contributors)
+[![GitHub issue custom search](https://img.shields.io/github/issues-search?query=repo%3AJustinianErdmier%2FErdmier.DomainCore%20is%3Aopen&label=issues%20%26%20tasks)](https://github.com/JustinianErdmier/Erdmier.DomainCore/issues)
 
 A small and lightweight library designed to give you the core essentials for implementing your domain layer (following Domain Driven Design). The primary benefit to this library is
 that it works well with EF Core. Extremely, heavily based on the design and implementation by [Amichai Mantinband](https://github.com/amantinband) in
 his [REST API w/ Clean Architecture & DDD](https://youtube.com/playlist?list=PLzYkqgWkHPKBcDIP5gzLfASkQyTdy0t4k&si=aULsyZmIpAnLQjT7) tutorial. Most of the changes I have made to
 this code are syntactical.
+
+## Sub-libraries
+
+`Erdmier.DomainCore.Mediator`:
+
+[![NuGet Version](https://img.shields.io/nuget/v/Erdmier.DomainCore.Mediator?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore.Mediator%2F)](https://www.nuget.org/packages/Erdmier.DomainCore.Mediator/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/Erdmier.DomainCore.Mediator?link=https%3A%2F%2Fwww.nuget.org%2Fpackages%2FErdmier.DomainCore.Mediator%2F)](https://www.nuget.org/packages/Erdmier.DomainCore.Mediator/)
 
 ## Table of Contents
 
@@ -18,14 +25,15 @@ this code are syntactical.
 2. [Road Map](#road-map)
 3. [Installing](#installing)
 4. [Examples](#examples)
+5. [Contribute](#contribute)
 
-## Features
+# Features
 
 * Designed to work with EF Core with no additional setup/boilerplate.
 * Easily extensible and requires little to no additional custom base class implementations.
 * Intuitive and understandable.
 
-## Road Map
+# Road Map
 
 This isn't so much a road map as it is a few ideas I would like to see added sometime in the future. Some of these items are listed in the Issues tab, and I plan to address them
 soon.
@@ -44,7 +52,7 @@ soon.
   project. And while I haven't done any sort of advertising or anything at all, over 400 people have downloaded this library. I was astonished by that and to be honest, it's what
   kept me interesting in polishing it. That's all to say, I'd hate to add bloat to something that's really meant to be lean and clean.
 
-## Installing
+# Installing
 
 Add the NuGet package.
 
@@ -52,7 +60,16 @@ Add the NuGet package.
 dotnet add package Erdmier.DomainCore
 ```
 
-## Examples
+# Examples
 
 I am working on adding tests at the moment. Once I am finished with that, I plan to add some demos and perhaps even thorough documentation in addition to the XAML documentation in
 the source code. There is no official ETA, but it is on my list of things to do!
+
+# Contribute
+
+> This contribution section is based on the one used by [Ardalis' `SmartEnum`](https://github.com/ardalis/SmartEnum/blob/main/CONTRIBUTING.md) project.
+
+I would be absolutely ecstatic if anyone wanted to help grow this project with me! Hopefully the following information will help make the process of contributing as easy and
+transparent as possible.
+
+To learn more about how to contribute, or even report a bug/request a feature, visit the [contribute page](CONTRIBUTE.md)

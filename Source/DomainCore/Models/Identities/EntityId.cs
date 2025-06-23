@@ -1,4 +1,4 @@
-﻿namespace Erdmier.DomainCore.Models.Identities;
+﻿namespace Erdmier.DomainCore;
 
 /// <summary>Represents the ID of an <see cref="Entity{TId}" />.</summary>
 /// <typeparam name="TId">The underlying type of the ID (e.g., <see cref="Guid" />).</typeparam>
