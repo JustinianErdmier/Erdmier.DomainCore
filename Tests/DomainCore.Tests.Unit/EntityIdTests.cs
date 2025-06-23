@@ -11,7 +11,7 @@ public sealed class EntityIdTests
     public void Constructor_ShouldSetValue_WhenGivenAValue()
     {
         // Arrange
-        Guid expectedValue = Guid.CreateVersion7();
+        Guid expectedValue = Guid.NewGuid();
 
         // Act
         TestEntityId id          = TestEntityId.Create(expectedValue);
@@ -120,7 +120,7 @@ public sealed class EntityIdTests
     public void ToString_ShouldReturnValueAsString()
     {
         // Arrange
-        Guid         value = Guid.CreateVersion7();
+        Guid         value = Guid.NewGuid();
         TestEntityId id    = TestEntityId.Create(value);
 
         // Act

@@ -9,7 +9,7 @@ public sealed class TestEntityId : EntityId<Guid>
     private TestEntityId()
     { }
 
-    public static TestEntityId Create() => new(Guid.CreateVersion7());
+    public static TestEntityId Create() => new(Guid.NewGuid());
 
     public static TestEntityId Create(Guid value) => new(value);
 
