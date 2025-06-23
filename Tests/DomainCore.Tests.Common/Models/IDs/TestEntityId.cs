@@ -6,7 +6,12 @@ public sealed class TestEntityId : EntityId<Guid>
         : base(value)
     { }
 
+    private TestEntityId()
+    { }
+
     public static TestEntityId Create() => new(Guid.CreateVersion7());
 
     public static TestEntityId Create(Guid value) => new(value);
+
+    public static TestEntityId CreateDefault() => new();
 }
