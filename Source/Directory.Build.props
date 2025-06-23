@@ -1,7 +1,7 @@
 ﻿<Project>
 
     <PropertyGroup>
-        <RepoRoot>$(MSBuildThisFileDirectory)</RepoRoot>
+        <RepoRoot>$(MSBuildThisFileDirectory)..\</RepoRoot>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>Justinian Erdmier</Authors>
         <!--        <Company>JustinianCodes.com</Company>-->
@@ -9,8 +9,8 @@
         <RepositoryUrl>https://github.com/JustinianErdmier/Erdmier.DomainCore</RepositoryUrl>
         <PackageProjectUrl>https://github.com/JustinianErdmier/Erdmier.DomainCore</PackageProjectUrl>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
-        <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+        <PackageReadmeFile>$(RepoRoot)README.md</PackageReadmeFile>
+        <PackageLicenseFile>$(RepoRoot)LICENSE.md</PackageLicenseFile>
         <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
@@ -22,7 +22,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <SolutionDir Condition="'$(SolutionDir)'==''">$(MSBuildThisFileDirectory)</SolutionDir>
+        <SolutionDir Condition="'$(SolutionDir)'==''">$(RepoRoot)</SolutionDir>
         <RepoRelativeProjectDir>$([MSBuild]::MakeRelative($(RepoRoot), $(MSBuildProjectDirectory)))</RepoRelativeProjectDir>
 
         <!-- Define useful flags based on project name conventions -->
