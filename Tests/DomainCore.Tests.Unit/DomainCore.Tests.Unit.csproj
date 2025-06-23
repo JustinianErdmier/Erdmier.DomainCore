@@ -9,7 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\DomainCore.Tests.Models\DomainCore.Tests.Models.csproj" />
+        <ProjectReference Include="..\DomainCore.Tests.Common\DomainCore.Tests.Common.csproj" />
     </ItemGroup>
 
     <ItemGroup>

@@ -1,6 +1,4 @@
-﻿using Erdmier.DomainCore.Models;
-
-namespace Erdmier.DomainCore.Tests.Models.SimpleValueObjects;
+﻿namespace Erdmier.DomainCore.Tests.Models.Models.SimpleValueObjects;
 
 public sealed class UnitedStatesPhoneNumber : ValueObject
 {

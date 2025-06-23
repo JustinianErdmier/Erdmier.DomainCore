@@ -1,4 +1,4 @@
-﻿using Erdmier.DomainCore.Tests.Models.SimpleValueObjects;
+﻿using Erdmier.DomainCore.Tests.Models.Models.SimpleValueObjects;
 
 namespace Erdmier.DomainCore.Tests.Unit;
 

@@ -18,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6B2A8486
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainCore.Tests.Unit", "Tests\DomainCore.Tests.Unit\DomainCore.Tests.Unit.csproj", "{EDF0149C-F822-4CA2-9D58-B7BD64D2C6F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainCore.Tests.Models", "Tests\DomainCore.Tests.Models\DomainCore.Tests.Models.csproj", "{82044F8F-E1EE-4AEE-812E-545DF792072A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainCore.Tests.Common", "Tests\DomainCore.Tests.Common\DomainCore.Tests.Common.csproj", "{82044F8F-E1EE-4AEE-812E-545DF792072A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorCore", "Source\MediatorCore\MediatorCore.csproj", "{0DD524CA-AF80-44A7-8EBC-015CDE16EE69}"
 EndProject

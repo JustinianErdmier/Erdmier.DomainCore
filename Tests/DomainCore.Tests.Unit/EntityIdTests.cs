@@ -1,4 +1,4 @@
-﻿using Erdmier.DomainCore.Tests.Models.IDs;
+﻿using Erdmier.DomainCore.Tests.Models.Models.IDs;
 
 namespace Erdmier.DomainCore.Tests.Unit;
 
@@ -11,8 +11,8 @@ public sealed class EntityIdTests
         Guid expectedValue = Guid.CreateVersion7();
 
         // Act
-        BookId bookId      = BookId.Create(expectedValue);
-        Guid   actualValue = bookId.Value;
+        TestEntityId testEntityId = TestEntityId.Create(expectedValue);
+        Guid         actualValue  = testEntityId.Value;
 
         // Assert
         Assert.Equal(expectedValue, actualValue);
@@ -22,11 +22,11 @@ public sealed class EntityIdTests
     public void ToString_ReturnsValueAsString()
     {
         // Arrange
-        Guid   value  = Guid.NewGuid();
-        BookId bookId = BookId.Create(value);
+        Guid         value        = Guid.NewGuid();
+        TestEntityId testEntityId = TestEntityId.Create(value);
 
         // Act
-        string? actualValue = bookId.ToString();
+        string? actualValue = testEntityId.ToString();
 
         // Assert
         string expectedValue = value.ToString();
